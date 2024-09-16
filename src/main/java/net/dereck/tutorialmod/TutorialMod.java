@@ -1,6 +1,7 @@
 package net.dereck.tutorialmod;
 
 import net.dereck.tutorialmod.block.ModBlocks;
+import net.dereck.tutorialmod.item.ModItemGroups;
 import net.dereck.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,10 +14,9 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-
-//		LOGGER.info("Hello Fabric world!");
 	}
 }
